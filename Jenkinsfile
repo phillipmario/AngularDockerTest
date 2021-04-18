@@ -1,5 +1,8 @@
 node {
     def app
+agent {
+  label 'angular'
+}
 
     
     stage('Clone repository') {
