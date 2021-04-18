@@ -22,6 +22,7 @@ node {
             }
         }
         stage('Deploy image') {
+	    kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "on-prem-kubernetes")
             app.inside {
                 sh 'echo "Deploy passed"'
             }
