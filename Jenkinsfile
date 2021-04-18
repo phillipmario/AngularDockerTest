@@ -23,7 +23,10 @@ node {
         }
         stage('Deploy image') {
             script {
-	       kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "on-prem-kubernetes")
+
+kubernetesDeploy configs: 'deployment.yml', kubeConfig: [path: '/home/jenkins/.kube/'], kubeconfigId: 'on-prem-kubernetes')
+
+
             }        
         }
     }
