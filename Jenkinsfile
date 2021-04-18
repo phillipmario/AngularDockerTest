@@ -20,7 +20,15 @@ node ("build-node-linux") {
         docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
+		 sh 'echo "${env.BUILD_NUMBER}"
         }
     }
+
+    stage ('deploy){
+       app.inside {
+            sh 'echo "deploy passed"'
+        }
+    }
+
 }
 }
