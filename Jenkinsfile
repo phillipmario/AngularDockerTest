@@ -1,8 +1,7 @@
 node {
     def app
     
-    agent "build-node-linux"
-    
+    agent any
     
     stage('Clone repository') {
       
