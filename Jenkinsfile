@@ -1,7 +1,7 @@
 node {
     def app
-    
-    agent any
+
+    agent { label 'dotnetcore' }
     
     stage('Clone repository') {
         checkout scm
