@@ -1,11 +1,8 @@
 node {
     def app
-agent {
-  label 'angular'
-}
-
-    
-    stage('Clone repository') {
+node ("build-node-linux") {
+ 
+       stage('Clone repository') {
         checkout scm
     }
 
@@ -25,4 +22,5 @@ agent {
             app.push("latest")
         }
     }
+}
 }
