@@ -21,12 +21,5 @@ node ("build-node-linux") {
                 app.push("latest")
             }
         }
-        stage('Deploy image') {
-            script {
-                kubernetesDeploy configs: 'deployment.yml', kubeConfig: [path: '/home/jenkins/.kube/'], kubeconfigId: 'on-prem-kubernetes'])
-
-
-            }        
-        }
  
 }
