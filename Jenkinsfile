@@ -21,5 +21,9 @@ node ("build-node-linux") {
                 app.push("latest")
             }
         }
+  
+  stage ('trying a ting'){
+    sh "kubectl get nodes"
+  }
  
 }
