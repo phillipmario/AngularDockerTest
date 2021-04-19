@@ -1,6 +1,6 @@
-node {
+node ("build-node-linux") {
     def app
-    node ("build-node-linux") {
+ 
         stage('Clone repository') {
             checkout scm
         }
@@ -28,5 +28,5 @@ node {
 
             }        
         }
-    }
+ 
 }
